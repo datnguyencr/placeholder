@@ -1,33 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dynamic Placeholder Generator</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Dynamic Placeholder Generator</title>
+      <link rel="stylesheet" href="assets/css/style.css" />
+   </head>
+   <body>
+      <h1>Placeholder Generator</h1>
 
-<h1>Placeholder Generator</h1>
-<div class="usage-container">
+      <div class="controls">
+         <div>
+            <div class="block">
+               <label for="widthInput">Width:</label
+               ><input type="number" id="widthInput" value="400" />
+            </div>
 
+            <div class="block">
+               <label for="heightInput">Height:</label
+               ><input type="number" id="heightInput" value="247" />
+            </div>
+         </div>
+         <div>
+            <div class="block">
+               <label for="bgInput">Background:</label>
+               <div class="input">
+                  <input type="color" id="bgInput" value="#eeeeee" /><span
+                     id="bgValue"
+                     class="color-value"
+                  ></span>
+               </div>
+            </div>
+            <div class="block">
+               <label for="fgInput">Text Color:</label>
+               <div class="input">
+                  <input type="color" id="fgInput" value="#444444" /><span
+                     id="fgValue"
+                     class="color-value"
+                  ></span>
+               </div>
+            </div>
+         </div>
+         <div>
+            <div class="block">
+               <label for="textInput">Text:</label>
+               <input type="text" id="textInput" value="Hello" />
+            </div>
+            <div class="block">
+               <div>
+                  <label for="fgInput"></label>
+                  <div class="input">
+                     <button id="generateBtn">Generate</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
+      <div class="usage-container">
+         <a id="usageInput" target="_blank"></a>
+         <button id="copyBtn">Copy</button>
+      </div>
+      <div>
+         <canvas id="placeholder"></canvas>
+         <img
+            id="placeholderImg"
+            alt="Generated Placeholder"
+            draggable="true"
+         />
+      </div>
 
-
-
-</div>
- <div> <label>Width: <input type="number" id="widthInput" value="400"></label> </div>
-  <div>  <label>Height: <input type="number" id="heightInput" value="247"></label> </div>
-  <div>  <label>Background: <input type="color" id="bgInput" value="#eeeeee"></label> </div>
-  <div>  <label>Text Color: <input type="color" id="fgInput" value="#444444"></label> </div>
-  <div>  <label>Text: <input type="text" id="textInput" value="Hello"></label> </div>
-  <button id="generateBtn">Generate</button>
-  <input type="text" id="usageInput" readonly>
-<button id="copyBtn">Copy URL</button>
-<canvas id="placeholder"></canvas>
-<img id="placeholderImg" draggable="true" />
-
-
-    <script src="assets/js/script.js"></script>
-</body>
+      <script src="assets/js/script.js"></script>
+   </body>
 </html>

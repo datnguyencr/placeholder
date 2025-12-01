@@ -1,31 +1,68 @@
+:root {
+  --primary-color: #5c3eaf;
+  --secondary-color: #007bff;
+  --background-dark: hsl(230, 38%, 6%);
+  --text-color: #ffffff;
+  --accent-gray: #ffffff;
+  --font-anonymous-pro: "Anonymous Pro", monospace;
+  --font-bebas-neue: "Bebas Neue", sans-serif;
+}
 
-  body {
+body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 40px;
     background: #222222;
     color: #ffffff;
-  }
-  canvas {
+}
+
+canvas {
     display: none;
-  }
-  img {
+}
+
+img {
     margin-top: 20px;
     border: 1px solid #ccc;
     cursor: grab;
-  }
-  .usage-container {
+}
+.input{
+    display: inline-flex;
+    align-items: center;   /* vertically center items */
+    justify-content: flex-start; /* left-align everything */
+    width: 200px;
+}
+.block{
+      display: inline-block;
+      margin: 5px 0;
+}
+.usage-container {display: inline-block;
     margin-top: 15px;
-  }
-  input[type="text"] {
-    width: 60%;
-    padding: 10px;
-    font-size: 16px;
-    text-align: center;
-    margin-right: 10px;
-  }
-  button {
+    margin-bottom: 10px;border: 1px solid var(--text-color);
+}
+.color-value{
+  padding: 0 10px;
+}
+input[type="number"], input[type="text"] {
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+}
+#usageInput{padding: 0 10px;
+text-decoration: none;    color: #ffffff;
+}
+input[type="color"] {
+    width: 44px;
+    height: 44px;
+}
+button {
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-  }
+}
+
+.controls label {
+    display: inline-block;
+    width: 120px; /* consistent width for all labels */
+    text-align: right;
+    margin-right: 10px;
+}
