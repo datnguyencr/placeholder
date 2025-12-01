@@ -16,9 +16,6 @@
   }
   .usage-container {
     margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   input[type="text"] {
     width: 60%;

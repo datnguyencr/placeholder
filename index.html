@@ -9,13 +9,25 @@
 <body>
 
 <h1>Placeholder Generator</h1>
+<div class="usage-container">
+
+
+
+
+
+</div>
+ <div> <label>Width: <input type="number" id="widthInput" value="400"></label> </div>
+  <div>  <label>Height: <input type="number" id="heightInput" value="247"></label> </div>
+  <div>  <label>Background: <input type="color" id="bgInput" value="#eeeeee"></label> </div>
+  <div>  <label>Text Color: <input type="color" id="fgInput" value="#444444"></label> </div>
+  <div>  <label>Text: <input type="text" id="textInput" value="Hello"></label> </div>
+  <button id="generateBtn">Generate</button>
+  <input type="text" id="usageInput" readonly>
+<button id="copyBtn">Copy URL</button>
 <canvas id="placeholder"></canvas>
 <img id="placeholderImg" draggable="true" />
 
-<div class="usage-container">
-  <input type="text" id="usageInput" readonly />
-  <button id="copyBtn">Copy</button>
-</div>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
