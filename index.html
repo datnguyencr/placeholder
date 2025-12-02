@@ -8,67 +8,64 @@
    </head>
    <body>
       <h1>Placeholder Generator</h1>
-
-      <div class="controls">
-         <div>
-            <div class="block">
-               <label for="widthInput">Width:</label
-               ><input type="number" id="widthInput" value="400" />
-            </div>
-
-            <div class="block">
-               <label for="heightInput">Height:</label
-               ><input type="number" id="heightInput" value="247" />
-            </div>
-         </div>
-         <div>
-            <div class="block">
-               <label for="bgInput">Background:</label>
-               <div class="input">
-                  <input type="color" id="bgInput" value="#eeeeee" /><span
-                     id="bgValue"
-                     class="color-value"
-                  ></span>
+      <div id="editor">
+         <div class="controls">
+            <div>
+               <div class="block">
+                  <label for="widthInput">Width:</label
+                     ><input type="number" id="widthInput" value="400" />
+               </div>
+               <div class="block">
+                  <label for="heightInput">Height:</label
+                     ><input type="number" id="heightInput" value="247" />
                </div>
             </div>
-            <div class="block">
-               <label for="fgInput">Text Color:</label>
-               <div class="input">
-                  <input type="color" id="fgInput" value="#444444" /><span
-                     id="fgValue"
-                     class="color-value"
-                  ></span>
+            <div>
+               <div class="block">
+                  <label for="bgInput">Background:</label>
+                  <div class="input">
+                     <input type="color" id="bgInput" value="#eeeeee" /><span
+                        id="bgValue"
+                        class="color-value"
+                        ></span>
+                  </div>
+               </div>
+               <div class="block">
+                  <label for="fgInput">Text Color:</label>
+                  <div class="input">
+                     <input type="color" id="fgInput" value="#444444" /><span
+                        id="fgValue"
+                        class="color-value"
+                        ></span>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="block">
+                  <label for="textInput">Text:</label>
+                  <input type="text" id="textInput" value="Hello" />
+               </div>
+               <div class="block">
+                  <label for="textSizeInput">Text Size:</label
+                     ><input type="number" id="textSizeInput" value="30" />
                </div>
             </div>
          </div>
-         <div>
-            <div class="block">
-               <label for="textInput">Text:</label>
-               <input type="text" id="textInput" value="Hello" />
-            </div>
-            <div class="block">
-               <label for="textSizeInput">Text Size:</label
-               ><input type="number" id="textSizeInput" value="30" />
-            </div>
-
+         <div><button id="generateBtn">Generate</button></div>
+         <div class="usage-container">
+            <a id="usageInput" class="text" target="_blank"></a>
+            <a id="copy" class="copy"><img src="./assets/images/copy.png"/></a>
          </div>
       </div>
-      <div><button id="generateBtn">Generate</button></div>
-      <div class="usage-container">
-         <a id="usageInput" class="text" target="_blank"></a>
-         <a id="copy" class="copy"><img src="./assets/images/copy.png"/></a>
-      </div>
-      <div>
+      <div >
          <canvas id="placeholder"></canvas>
          <img
             id="placeholderImg"
             alt="Generated Placeholder"
             draggable="true"
-         />
+            />
       </div>
-<div id="toast" class="toast"></div>
-
+      <div id="toast" class="toast"></div>
       <script src="assets/js/script.js"></script>
-
    </body>
 </html>
