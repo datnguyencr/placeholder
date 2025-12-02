@@ -35,9 +35,11 @@ img {
       display: inline-block;
       margin: 5px 0;
 }
-.usage-container {display: inline-block;
+.usage-container {
+    display: inline-flex;
     margin-top: 15px;
-    margin-bottom: 10px;border: 1px solid var(--text-color);
+    margin-bottom: 10px;
+    border: 1px solid var(--text-color);
 }
 .color-value{
   padding: 0 10px;
@@ -47,8 +49,18 @@ input[type="number"], input[type="text"] {
     height: 40px;
     font-size: 14px;
 }
-#usageInput{padding: 0 10px;
-text-decoration: none;    color: #ffffff;
+.usage-container .text{
+  padding: 5px 10px;
+text-decoration: none;    
+color: #ffffff;
+}
+.usage-container .copy{
+  padding: 5px 10px;
+text-decoration: none;    
+color: #ffffff;
+    width: 40px;
+    height: 40px;
+align-content: center;
 }
 input[type="color"] {
     width: 44px;
