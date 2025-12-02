@@ -20,7 +20,6 @@ canvas {
   display: none;
 }
 
-
 .input {
   display: inline-flex;
   align-items: center; /* vertically center items */
@@ -32,7 +31,7 @@ canvas {
   margin: 5px 0;
 }
 .usage-container {
-    max-width: min(500px, 100%);
+  max-width: min(500px, 100%);
   display: inline-flex;
   margin-top: 15px;
   margin-bottom: 10px;
@@ -52,10 +51,10 @@ input[type="text"] {
   padding: 5px 10px;
   text-decoration: none;
   color: #ffffff;
-  display: inline-block; 
-    max-width: 100%;     
-    word-break: break-all;
-    white-space: normal;
+  display: inline-block;
+  max-width: 100%;
+  word-break: break-all;
+  white-space: normal;
 }
 .usage-container .copy {
   padding: 5px;
@@ -68,9 +67,9 @@ input[type="text"] {
   width: 40px;
   align-content: center;
 }
-.usage-container .copy img{
-    width: 24px;
-    height: 24px;
+.usage-container .copy img {
+  width: 24px;
+  height: 24px;
 }
 input[type="color"] {
   width: 44px;
@@ -78,7 +77,11 @@ input[type="color"] {
 }
 
 button {
-    background-image: linear-gradient(to right,  rgb(221, 36, 118), rgb(255, 81, 47));
+  background-image: linear-gradient(
+    to right,
+    rgb(221, 36, 118),
+    rgb(255, 81, 47)
+  );
   margin-top: 20px;
   padding: 10px 15px;
   color: var(--text-color);
@@ -89,8 +92,8 @@ button {
   cursor: pointer;
 }
 
-button:hover{
-    background-image: linear-gradient(to right,  rgb(97, 4, 95),rgb(170, 7, 107));
+button:hover {
+  background-image: linear-gradient(to right, rgb(97, 4, 95), rgb(170, 7, 107));
 }
 
 .controls label {
@@ -100,24 +103,24 @@ button:hover{
   margin-right: 10px;
 }
 .toast {
-    visibility: hidden;
-    min-width: 150px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
-    padding: 10px;
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    font-size: 14px;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden;
+  min-width: 150px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 10px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .toast.show {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
