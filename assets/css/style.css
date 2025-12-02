@@ -9,72 +9,115 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 40px;
-    background: #222222;
-    color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background: #222222;
+  color: #ffffff;
 }
 
 canvas {
-    display: none;
+  display: none;
 }
 
-img {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    cursor: grab;
+
+.input {
+  display: inline-flex;
+  align-items: center; /* vertically center items */
+  justify-content: flex-start; /* left-align everything */
+  width: 200px;
 }
-.input{
-    display: inline-flex;
-    align-items: center;   /* vertically center items */
-    justify-content: flex-start; /* left-align everything */
-    width: 200px;
-}
-.block{
-      display: inline-block;
-      margin: 5px 0;
+.block {
+  display: inline-block;
+  margin: 5px 0;
 }
 .usage-container {
-    display: inline-flex;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    border: 1px solid var(--text-color);
+    max-width: min(500px, 100%);
+  display: inline-flex;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 1px solid var(--text-color);
 }
-.color-value{
+.color-value {
   padding: 0 10px;
 }
-input[type="number"], input[type="text"] {
-    width: 200px;
-    height: 40px;
-    font-size: 14px;
+input[type="number"],
+input[type="text"] {
+  width: 200px;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 14px;
 }
-.usage-container .text{
+.usage-container .text {
   padding: 5px 10px;
-text-decoration: none;    
-color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block; 
+    max-width: 100%;     
+    word-break: break-all;
+    white-space: normal;
 }
-.usage-container .copy{
-  padding: 5px 10px;
-text-decoration: none;    
-color: #ffffff;
-    width: 40px;
-    height: 40px;
-align-content: center;
+.usage-container .copy {
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000;
+  min-height: 40px;
+  min-width: 40px;
+  width: 40px;
+  align-content: center;
+}
+.usage-container .copy img{
+    width: 24px;
+    height: 24px;
 }
 input[type="color"] {
-    width: 44px;
-    height: 44px;
+  width: 44px;
+  height: 44px;
 }
+
 button {
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
+    background-image: linear-gradient(to right,  rgb(221, 36, 118), rgb(255, 81, 47));
+  margin-top: 20px;
+  padding: 10px 15px;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  font-size: 16px;
+  border-radius: 24px;
+  min-width: 220px;
+  cursor: pointer;
+}
+
+button:hover{
+    background-image: linear-gradient(to right,  rgb(97, 4, 95),rgb(170, 7, 107));
 }
 
 .controls label {
-    display: inline-block;
-    width: 120px; /* consistent width for all labels */
-    text-align: right;
-    margin-right: 10px;
+  display: inline-block;
+  width: 120px; /* consistent width for all labels */
+  text-align: right;
+  margin-right: 10px;
+}
+.toast {
+    visibility: hidden;
+    min-width: 150px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
 }

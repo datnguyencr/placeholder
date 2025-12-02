@@ -47,19 +47,16 @@
                <input type="text" id="textInput" value="Hello" />
             </div>
             <div class="block">
-               <div>
-                  <label for="fgInput"></label>
-                  <div class="input">
-                     <button id="generateBtn">Generate</button>
-                  </div>
-               </div>
+               <label for="textSizeInput">Text Size:</label
+               ><input type="number" id="textSizeInput" value="30" />
             </div>
+
          </div>
       </div>
-
+      <div><button id="generateBtn">Generate</button></div>
       <div class="usage-container">
          <a id="usageInput" class="text" target="_blank"></a>
-         <a class="copy">Copy</a>
+         <a id="copy" class="copy"><img src="./assets/images/copy.png"/></a>
       </div>
       <div>
          <canvas id="placeholder"></canvas>
@@ -69,7 +66,9 @@
             draggable="true"
          />
       </div>
+<div id="toast" class="toast"></div>
 
       <script src="assets/js/script.js"></script>
+
    </body>
 </html>
